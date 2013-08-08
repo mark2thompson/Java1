@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+/Users/markthompson/github/Java1/.metadata/.plugins/org.eclipse.jdt.core
+880316256.index
+3645381679.index
