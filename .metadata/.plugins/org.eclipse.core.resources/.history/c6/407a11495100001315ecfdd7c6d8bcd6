@@ -4,10 +4,5 @@
     <string name="app_name">week1</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="moneyamts">Money</string>
-    <string name="quarter">Quarter</string>
-	<string name="dime">Dime</string>
-	<string name="nickel">Nickel</string>
-	<string name="penny">Penny</string>
-	
+
 </resources>

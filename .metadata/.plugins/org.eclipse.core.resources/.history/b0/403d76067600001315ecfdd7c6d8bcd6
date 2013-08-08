@@ -80,7 +80,12 @@ public class MainActivity extends Activity {
         form.addView(b);
         
         ll.addView(form);
-        result = new TextView(this);          
+        
+        result = new TextView(this);        
+         
+        ll.addView(form);
+        
+        result = new TextView(this);
         setContentView(ll);
         ll.addView(result);
     }
