@@ -32,29 +32,25 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //layout of application allows for each item to be placed near eachother without overlapping
+        
         ll = new LinearLayout(this);
         ll.setOrientation(LinearLayout.VERTICAL);
     	lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
     	ll.setLayoutParams(lp);
     	
-    	// text view that contains the strings for the amount of money after calculated
     	TextView tv = new TextView(this);
         tv.setText(getString(R.string.quarter)+"," +getString(R.string.dime)+ "," +getString(R.string.nickel)+ "," +getString(R.string.penny ));
         final TextView ifTv = new TextView(this);
         final TextView spentQuarters = new TextView(this);
         
-        //text field
         et = new EditText(this);
         et.setHint("Convert dollars");
         
-        //calculate button and click listener function
         Button b = new Button(this);
         b.setText("Convert");
         b.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
-			//when button is clicked
 			public void onClick(View v) {
 				int quarter = getResources().getInteger(R.integer.quarter);
 				int dime = getResources().getInteger(R.integer.dime);
@@ -62,17 +58,15 @@ public class MainActivity extends Activity {
 				int penny = getResources().getInteger(R.integer.penny);
 				
 				int entry = Integer.parseInt(et.getText().toString());
-				//calculation for how much money is entered into textfield
+				
 				int numQ = (100/quarter)*entry;
 				int numD = (100/dime)*entry;
 				int numN = (100/nickel)*entry;
 				int numP = (100/penny)*entry;
 				
-				//conditional statement, this condition just checks to see if the quarters are more then 2500
 				if (numQ>2500){
 					ifTv.setText("Thats a lot of quarters!!");
 					int i = numQ;
-					//simple while loop - only loops once in this case - would be considered a switch because of the contained boolean.
 					while (boolCheck == false){		
 						spendQ = (numQ - i);
 						i = spendQ;
@@ -82,14 +76,12 @@ public class MainActivity extends Activity {
 				}else{
 					ifTv.setText("That is not a lot of quarters");
 				};
-				//sets text for amount of change after calculation
 				result.setText("Quarter: " + numQ + "\r\n" + 
 						"Dime: " + numD + "\r\n" + 
 						"Nickel: " + numN + "\r\n" + 
 						"Penny: " + numP + "\r\n");
 			}
 		});
-        //adds items to the view... 
         LinearLayout form = new LinearLayout(this);
         form.setOrientation(LinearLayout.HORIZONTAL);
         lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
