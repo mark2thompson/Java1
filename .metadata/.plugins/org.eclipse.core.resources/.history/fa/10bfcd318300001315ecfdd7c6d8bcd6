@@ -27,8 +27,7 @@ public class MainActivity extends Activity {
 	EditText et;
 	TextView result;
 	TextView ifTv;
-	int spendQ;
-	boolean boolCheck = false;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,12 +65,9 @@ public class MainActivity extends Activity {
 				
 				if (numQ>2500){
 					ifTv.setText("Thats a lot of quarters!!");
-					int i = numQ;
-					while (boolCheck == false){		
-						spendQ = (numQ - i);
-						i = spendQ;
-						spentQuarters.setText("ive spent all my quarters, I have " + i + " quarters left!");
-						boolCheck = true;
+					while (numQ>2500){
+						int spendQ = (numQ -1000);
+						spentQuarters.setText("Spending Quarters" + spendQ);
 					}
 				}else{
 					ifTv.setText("That is not a lot of quarters");

@@ -70,7 +70,7 @@ public class MainActivity extends Activity {
 					while (boolCheck == false){		
 						spendQ = (numQ - i);
 						i = spendQ;
-						spentQuarters.setText("ive spent all my quarters, I have " + i + " quarters left!");
+						spentQuarters.setText("ive spent all my quarters, I have " + i + "quarters left!");
 						boolCheck = true;
 					}
 				}else{
