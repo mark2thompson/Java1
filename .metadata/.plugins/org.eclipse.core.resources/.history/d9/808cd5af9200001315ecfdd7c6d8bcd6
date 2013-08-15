@@ -10,7 +10,6 @@
 package com.example.week1;
 
 import android.app.Activity;
-import android.database.CursorJoiner.Result;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -32,7 +31,7 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //layout of application allows for each item to be placed near each other without overlapping
+        //layout of application allows for each item to be placed near eachother without overlapping
         ll = new LinearLayout(this);
         ll.setOrientation(LinearLayout.VERTICAL);
     	lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
