@@ -1,12 +1,3 @@
-/*
- * project		Week2
- * 
- * package		com.markthompson.lib
- * 
- * @author		Mark Thompson
- * 
- * date			Aug 15, 2013
- */
 package com.markthompson.lib;
 
 import android.content.Context;
