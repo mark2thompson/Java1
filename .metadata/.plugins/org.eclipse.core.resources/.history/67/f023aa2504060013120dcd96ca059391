@@ -1,0 +1,5 @@
+package com.markthompson.fishThings;
+
+public interface FishType {
+
+}

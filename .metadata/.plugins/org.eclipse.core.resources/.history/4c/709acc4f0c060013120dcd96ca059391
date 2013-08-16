@@ -1,0 +1,36 @@
+package com.markthompson.fishThings;
+
+public class Fish implements FishType {
+
+	String name;
+	double size;
+	
+	public Fish(String name, double size){
+		setName(name);
+		setSize(size);
+	}
+	@Override
+	public boolean setName(String name) {
+		this.name = name;
+		return true;
+	}
+
+	@Override
+	public boolean setSize(double size) {
+		this.size = size;
+		return true;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return this.name;
+	}
+
+	@Override
+	public double getSize() {
+		// TODO Auto-generated method stub
+		return this.size;
+	}
+
+}

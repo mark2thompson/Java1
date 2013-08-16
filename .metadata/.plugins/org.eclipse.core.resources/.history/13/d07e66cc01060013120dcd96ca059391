@@ -1,0 +1,21 @@
+package com.markthompson.fishingStuff;
+
+import java.util.HashMap;
+
+public enum FishSize {
+	REDFISH(27),
+	BLUEFISH(23),
+	TROUT(21),
+	SNOOK(28);
+	
+	private final int size;
+	
+	FishSize(int size){
+		this.size = size;
+	}
+	public static HashMap<FishSize, Integer> getAmount(double amount){
+		HashMap<FishSize, Integer> fishInCooler = new HashMap<FishSize, Integer>();
+		
+		return fishInCooler;
+	}
+}

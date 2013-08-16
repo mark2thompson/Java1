@@ -1,0 +1,5 @@
+package com.markthompson.fishingStuff;
+
+public enum FishSize {
+
+}
