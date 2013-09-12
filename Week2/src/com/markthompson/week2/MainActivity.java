@@ -5,7 +5,7 @@
  * 
  * @author		Mark Thompson
  * 
- * date			Aug 15, 2013
+ * date			Sep 12, 2013
  */
 package com.markthompson.week2;
 
@@ -55,10 +55,10 @@ public class MainActivity extends Activity {
 				RadioButton selectedRadio = (RadioButton)typeOptions.findViewById(selectedRadioId);
 				String radioText = (String)selectedRadio.getText();
 				
-				double length = 0;
+				
 				for(int i=0; i<fishTypes.size(); i++){
 					if(radioText.compareTo(fishTypes.get(i).getName()) == 0 ){
-						length = fishTypes.get(i).getLength();
+						double length = fishTypes.get(i).getLength();
 					}
 				}
 				
