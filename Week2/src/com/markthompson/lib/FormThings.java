@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 public class FormThings {
 	
@@ -34,7 +35,7 @@ public class FormThings {
 		b.setText(buttonText);
 		b.setId(2);
 		b.setTag(et);
-		
+			
 		ll.addView(et);
 		ll.addView(b);
 		

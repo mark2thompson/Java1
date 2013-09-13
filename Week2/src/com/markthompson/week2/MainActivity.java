@@ -26,6 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 
 
@@ -33,6 +34,8 @@ public class MainActivity extends Activity {
 
 	RadioGroup typeOptions;
 	ArrayList<FishType> fishTypes;
+	EditText fishLength;
+	TextView result;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,22 +52,33 @@ public class MainActivity extends Activity {
 		fishButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
-			public void onClick(View v) {
+			public void onClick(View v) 
+			{
 
 				int selectedRadioId = typeOptions.getCheckedRadioButtonId();
 				RadioButton selectedRadio = (RadioButton)typeOptions.findViewById(selectedRadioId);
 				String radioText = (String)selectedRadio.getText();
 				
-				
+				double length = 0;
 				for(int i=0; i<fishTypes.size(); i++){
 					if(radioText.compareTo(fishTypes.get(i).getName()) == 0 ){
-						double length = fishTypes.get(i).getLength();
+						length = fishTypes.get(i).getLength();
+						
 					}
 				}
 				
-				EditText fishLength = (EditText) v.getTag(); 
-				Log.i("Button ", fishLength.getText().toString());
+				fishLength = (EditText) v.getTag(); 
+				Log.i("Button", fishLength.getText().toString());
+				int entry = Integer.parseInt(fishLength.getText().toString());
 				
+				if (entry <= length)
+				{
+					result.setText("This is a legal fish, keep it");
+				}else {
+					result.setText("This fish is to large, throw it back");
+				}
+				
+			
 			}
 		});
 		
@@ -84,7 +98,14 @@ public class MainActivity extends Activity {
 		}
 		
 		typeOptions = FormThings.getOptions(this, fishNames);
+		TextView tv = new TextView(this);
+		tv.setText("Select the fish you caught then enter size");
 		
+		result = new TextView(this);
+		//result.setLayoutParams(lp);
+		ll.addView(result);
+		
+		ll.addView(tv);
 		ll.addView(typeOptions);
 		
 		ll.addView(entryBox);

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;com.markthompson.week2.MainActivity.onCreate().textView&apos; in &apos;com.markthompson.week2.MainActivity.onCreate()&apos; to field&#x0A;- Original project: &apos;Week2&apos;&#x0A;- Original element: &apos;com.markthompson.week2.MainActivity.onCreate().textView&apos;&#x0A;- Field name: &apos;textView&apos;&#x0A;- Initialize field in method&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;textView&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;com.markthompson.week2{MainActivity.java" name="textView" selection="1288 37" stamp="1379026515964" static="false" version="1.0" visibility="2"/>
+</session>
